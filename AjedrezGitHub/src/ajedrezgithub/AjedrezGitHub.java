@@ -34,7 +34,7 @@ public class AjedrezGitHub {
 					
 					
 				}else{
-					System.out.println("Movimiento inv�lido");
+					System.out.println("Movimiento no válido");
 					fin=true;
 				}
 			}
