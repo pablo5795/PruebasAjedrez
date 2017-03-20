@@ -15,4 +15,14 @@ public class Juego {
         
         return opcion;
     }
+    
+    public Jugador nuevoJugador(){
+        Scanner teclado = new Scanner(System.in);
+        String nombre;
+        Jugador jugador = null;
+        System.out.print("Nombre del Jugador: ");
+        nombre = teclado.next();
+        jugador = new Jugador(nombre);
+        return jugador;
+    }
 }

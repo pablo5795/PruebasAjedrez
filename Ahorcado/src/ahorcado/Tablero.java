@@ -31,5 +31,44 @@ public class Tablero {
                 System.out.print("  ");
             }
         }
+        System.out.println("");
+    }
+    
+    public boolean buscarLetra(char letra){
+        boolean hayLetra=false;
+        if(letra>='a' && letra<='z'){
+            letra=(char) ((int)letra-32);
+        }
+        char aux[];
+        palabra=palabra.toUpperCase();
+        aux=palabra.toCharArray();
+        for(int i=0;i<aux.length && hayLetra==false;i++){
+            if(aux[i]==letra){
+                hayLetra=true;
+            }
+        }
+        return hayLetra;
+    }
+    
+    public void mostrarLetra(char letra){
+        char aux[];
+        palabra=palabra.toUpperCase();
+        aux=palabra.toCharArray();
+        if(letra>='a' && letra<='z'){
+            letra=(char) ((int)letra-32);
+        }
+        for(int i=0;i<aux.length;i++){
+            if(aux[i]>='A' && aux[i]<='Z'){
+                if(aux[i]==letra){
+                    System.out.print(letra+" ");
+                }
+                else{
+                    System.out.print("_ ");
+                }
+            }else{
+                System.out.print("  ");
+            }
+        }
+        System.out.println("");
     }
 }
