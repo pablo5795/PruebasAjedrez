@@ -3,6 +3,7 @@ package ahorcado;
 public class Jugador {
     private String nombre;
     private int vidas;
+    private String fallos;
     
     public Jugador(String nombre){
         this.nombre=nombre;
@@ -20,4 +21,19 @@ public class Jugador {
         vidas-=1;
     }
     
+    public void getFallos(){
+        System.out.print("Letras falladas: ");
+        if(fallos==null){
+            System.out.println(" ");
+        }else{
+            System.out.println(fallos);
+        }
+    }
+    public void setFallos(char letra){
+        if(fallos==null){
+            fallos=""+letra;
+        }else{
+            fallos=fallos+" "+letra;
+        }
+    }
 }

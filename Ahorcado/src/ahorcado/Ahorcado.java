@@ -16,6 +16,7 @@ public class Ahorcado {
         
         miTablero.pintarTablero();
         do{
+            miJugador.getFallos();
             System.out.print("Introduzca letra: ");
             letra = (char) System.in.read();
             System.in.read();
@@ -24,6 +25,7 @@ public class Ahorcado {
             }else{
                 System.out.println("Esa letra no se encuentra en la palabra");
                 miJugador.setVidas();
+                miJugador.setFallos(letra);
             }
             System.out.println("Te quedan "+miJugador.getVidas()+" vidas, "+miJugador.getNombre());
         }while(miJugador.getVidas()>0);
