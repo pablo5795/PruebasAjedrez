@@ -2,9 +2,9 @@ package ahorcado;
 
 public class Tablero {
     
-    private String [] nivelFacil = {"Agua","Cocina","Teclado","Silla","Perro"};
-    private String [] nivelMedio = {"Murcielago","Microprocesador","Sistema Informatico"};
-    private String [] nivelDificil = {"Memoria Volatil","Gestion de usuarios","Disco extraible"};
+    private String [] nivelFacil = {"Teclado","Silla","Raton","Monitor","Impresora","Escaner"};
+    private String [] nivelMedio = {"Microprocesador","Sistema Informatico","Sistema Operativo","Pantalla plana","Camara interna"};
+    private String [] nivelDificil = {"Memoria Volatil","Gestion de usuarios","Disco extraible","Diagrama de clases","Estructura de datos"};
     private String palabra;
     private String palabra2;
     
@@ -100,5 +100,10 @@ public class Tablero {
             fin=true;
         }
         return fin;
+    }
+    
+    public void comprobarPalabra(String frase){
+        palabra2=frase;
+        verFinal();
     }
 }
