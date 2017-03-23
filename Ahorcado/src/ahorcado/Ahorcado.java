@@ -17,9 +17,11 @@ public class Ahorcado {
         miTablero.pintarTablero();
         do{
             miJugador.getFallos();
+            do{
             System.out.print("Introduzca letra: ");
             letra = (char) System.in.read();
             System.in.read();
+            }while((letra>01 && letra<=64) || (letra>=91 && letra<=96) || (letra>=123 && letra<=255));
             if(miTablero.buscarLetra(letra)){
                 miTablero.mostrarLetra(letra);
             }else{
@@ -28,7 +30,7 @@ public class Ahorcado {
                 miJugador.setFallos(letra);
             }
             System.out.println("Te quedan "+miJugador.getVidas()+" vidas, "+miJugador.getNombre());
-        }while(miJugador.getVidas()>0);
+        }while(miJugador.getVidas()>0 && !miTablero.verFinal());
     }
     
 }
